@@ -1,0 +1,31 @@
+{
+  "name": "blockx",
+  "version": "0.0.1",
+  "description": "A blockchain for health",
+  "main": ".",
+  "scripts": {
+    "test": "truffle test",
+    "dev": "truffle develop",
+    "dev:console": "truffle console",
+    "start:dev": "npx simple-server client 3000"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aduwillie/ad-blockx.git"
+  },
+  "keywords": [
+    "BlockX",
+    "blockchain",
+    "hatua"
+  ],
+  "author": "Adu Williams",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aduwillie/ad-blockx/issues"
+  },
+  "homepage": "https://github.com/aduwillie/ad-blockx#readme",
+  "devDependencies": {
+    "simple-server": "^1.1.1",
+    "truffle": "^4.1.14"
+  }
+}
