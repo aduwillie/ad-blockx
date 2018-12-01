@@ -5,8 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>BlockX</title>
+    <link href="./css/index.css" rel="stylesheet" />
 </head>
 <body>
-    <p>This is BlockX</p>
+    <div class="page">
+        <h4>BlockX Demo</h4>
+        <div id="profile">
+            <p>Your current address is <span id="profile-address"></span></p>
+            <form id="set-profile-address-form">
+                <input id="set-profile-address-form-input" type="text" pattern="0x[a-fA-F0-9]{40}" placeholder="Enter your ethereum address here" required />
+                <button id="set-profile-address-form-button" type="submit">Set new address</button>
+            </form>
+        </div>
+        <fieldset id="hospital">
+            <legend>Hospital Transactions</legend>
+            <p>Total number of hospitals: <span id="hospital-count">0</span></p>
+            <form id="add-hospital-form">
+                <input id="add-hospital-form-h-name-input" type="text" placeholder="Enter name of hospital here" required />
+                <input id="add-hospital-form-h-address-input" type="text" pattern="0x[a-fA-F0-9]{40}" placeholder="Enter address of hospital" required />
+                <button id="add-hospital-form-button" type="submit">Add hosptial</button>
+            </form>
+        </fieldset>
+    </div>
+
+    <script src="./js/web3.js"></script>
+    <script src="./js/truffle-contract.js"></script>
+    <script src="./js/util-functions.js"></script>
+    <script src="./js/blockx-manager.js"></script>
+    <script src="./js/profile-manager.js"></script>
+    <script src="./js/hospital-manager.js"></script>
+    <script src="./js/index.js"></script>
 </body>
 </html>
