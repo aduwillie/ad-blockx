@@ -8,6 +8,7 @@ contract BlockXHealth {
     }
     address private _owner;
     uint private _totalHospitalVisits;
+    uint private _totalHospitals;
     mapping (address => uint) private _totalVisitForHospital;
     mapping (address => mapping (address => PatientVisit)) private _patientVisits;
     mapping(address => string) private _hospitals;
@@ -18,6 +19,10 @@ contract BlockXHealth {
     
     function getOwner() public view returns (address) {
         return _owner;
+    }
+
+    function getTotalHospitals() public view returns (uint) {
+        return _totalHospitals;
     }
     
     function getTotalHospitalVisits() public view returns (uint) {
@@ -35,9 +40,12 @@ contract BlockXHealth {
     function addHospital(address _hospitalAddress, string _hospitalName) public returns (bool) {
         if (msg.sender == _owner) {
             _hospitals[_hospitalAddress] = _hospitalName;
+            _totalHospitals += 1;
             return true;
         }
-        return false;
+        else {
+            return false;
+        }
     }
     
     function addPatientVisit(address _hospitalAddress, uint _timeOfVisit) public returns (bool) {
