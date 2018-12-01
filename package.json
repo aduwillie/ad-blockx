@@ -4,10 +4,12 @@
   "description": "A blockchain for health",
   "main": ".",
   "scripts": {
-    "test": "truffle test",
+    "compile": "truffle compile",
     "dev": "truffle develop",
     "dev:console": "truffle console",
-    "start:dev": "npx simple-server client 3000"
+    "migrate:dev": "truffle migrate --network development --reset",
+    "start:dev": "npx simple-server client 3000",
+    "test": "truffle test"
   },
   "repository": {
     "type": "git",
@@ -25,6 +27,7 @@
   },
   "homepage": "https://github.com/aduwillie/ad-blockx#readme",
   "devDependencies": {
+    "ganache-cli": "^6.2.3",
     "simple-server": "^1.1.1",
     "truffle": "^4.1.14"
   }
